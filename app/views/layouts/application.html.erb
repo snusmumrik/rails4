@@ -9,8 +9,17 @@
 
   <body>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <% if notice %>
+      <div class="alert alert-success">
+        <p id="notice"><%= notice %></p>
+      </div>
+    <% end %>
+
+    <% if alert %>
+      <div class="alert alert-error">
+        <p id="alert"><%= alert %></p>
+      </div>
+    <% end %>
 
     <%= yield %>
 
