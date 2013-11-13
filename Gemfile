@@ -44,4 +44,26 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+group :test, :development do
+  gem 'rspec-rails'
+  # gem 'guard-rspec'
+  # gem 'capybara'
+end
+
+group :development do
+  gem 'spring'
+  gem 'parallel_tests'
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'spork-rails'
+  # gem 'cucumber-rails', :require => false
+  # rails generate cucumber:install --capybara --rspec --spork
+  # database_cleaner is not required, but highly recommended
+  # gem 'database_cleaner'
+  # Pretty printed test output
+  # gem 'turn', :require => false
+end
+
 gem 'devise'
