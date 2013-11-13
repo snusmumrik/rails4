@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$ ->
+  $("a.anchor[href^=#]").click ->
+    speed = 500
+    href = $(this).attr("href")
+    target = $((if href is "#" or href is "" then "html" else href))
+    position = target.offset().top
+    $("html, body").animate
+      scrollTop: position
+    , speed, "swing"
+    false
