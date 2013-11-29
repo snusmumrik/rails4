@@ -46,18 +46,11 @@ end
 
 group :test, :development do
   gem 'rspec-rails'
-  # gem 'guard-rspec'
   # gem 'capybara'
 end
 
-group :development do
-  gem 'spring'
-  gem 'parallel_tests'
-end
-
 group :test do
-  gem 'factory_girl_rails'
-  gem 'spork-rails'
+  # gem 'spork-rails'
   # gem 'cucumber-rails', :require => false
   # rails generate cucumber:install --capybara --rspec --spork
   # database_cleaner is not required, but highly recommended
@@ -66,4 +59,18 @@ group :test do
   # gem 'turn', :require => false
 end
 
+group :development do
+  gem 'spring'
+  gem 'parallel_tests'
+  gem 'factory_girl_rails'
+  gem 'guard-rspec'
+  gem 'guard-spring'
+end
+
 gem 'devise'
+gem 'paranoia'
+gem 'friendly_id'
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
+gem 'i18n_generators'
