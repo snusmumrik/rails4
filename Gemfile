@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.3'
+gem 'rails', '4.1.1'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
@@ -70,8 +70,6 @@ end
 gem 'devise'
 gem 'paranoia'
 gem 'friendly_id'
-gem 'therubyracer'
-gem 'less-rails'
-gem 'twitter-bootstrap-rails'
 gem 'i18n_generators'
 gem 'rails_admin'
+gem 'kaminari'
