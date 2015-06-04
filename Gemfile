@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.1'
+gem 'rails', '4.2.1'
 
 # Use mysql as the database for Active Record
 gem 'mysql2'
@@ -45,8 +45,13 @@ end
 # gem 'debugger', group: [:development, :test]
 
 group :test, :development do
-  gem 'rspec-rails'
   # gem 'capybara'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'spring'
+  # gem 'guard-spring'
+  gem 'parallel_tests'
+  gem 'factory_girl_rails'
 end
 
 group :test do
@@ -60,16 +65,21 @@ group :test do
 end
 
 group :development do
-  gem 'spring'
-  gem 'parallel_tests'
-  gem 'factory_girl_rails'
-  gem 'guard-rspec'
-  gem 'guard-spring'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
+gem 'aws-sdk', '< 2.0'
+gem 'cancancan'
 gem 'devise'
-gem 'paranoia'
+gem 'devise-i18n'
+gem 'erb2haml'
 gem 'friendly_id'
+gem 'haml'
 gem 'i18n_generators'
-gem 'rails_admin'
 gem 'kaminari'
+gem 'paranoia'
+gem 'paperclip'
+gem 'rails_admin'
